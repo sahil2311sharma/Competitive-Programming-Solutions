@@ -23,12 +23,12 @@ Node*takeInput()
         if(head==NULL)
         {
             head=newNode;
-	    tail=newNode;
+	        tail=newNode;
         }
         else
         {
             tail->next=newNode;
-	    tail=newNode;
+	        tail=newNode;
         }
         cin>>data;
     }
