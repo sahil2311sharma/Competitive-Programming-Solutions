@@ -81,14 +81,14 @@ public:
         v[src] = 0;
         while (!q.empty())
         {
-            int temp = q.front();
+            auto temp = q.front();
             q.pop();
-            for (auto it : adj[temp])
+            for (auto i : adj[temp])
             {
-                if (v[temp] + 1 < v[it])
+                if (v[temp] + 1 < v[i])
                 {
-                    v[it] = v[temp] + 1;
-                    q.push(it);
+                    v[i] = v[temp] + 1;
+                    q.push(i);
                 }
             }
         }
