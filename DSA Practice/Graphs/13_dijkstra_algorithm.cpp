@@ -16,10 +16,14 @@ int main()
     }
     cout << "Enter the initial source :";
     cin >> source;
+
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+
     vector<int> dist(n + 1, INT_MAX);
     dist[source] = 0;
+
     pq.push(make_pair(0, source));
+
     while (!pq.empty())
     {
         int dis = pq.top().first;
